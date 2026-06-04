@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+    <!--header-->
+    <header class="header">
+        <div class="box-logo"> 
+           <a class="header-logo"href="#">FALCON.</a>
+           <i class="fa-solid fa-code"></i>
+        </div>
+        <nav class="header-nav">
+            <ul class="header-links">
+                <li><a class="active"href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">Compétence</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="header-btn"href="#">Me contacter</a>
+    </header>
+    <!--header-->
+    
+    
+    <!--hero-->
+    <section class="hero">
+        <div class="hero-left">
+            <p class="bold">Bonjour, je suis <span>Fallou.</span></p>
+            <p class="bold2">Developpeur web front-End</p>
+            <p class="hero-text">Je construis des sites web modernes,
+            rapisdes et<br> adaptés à tous les appareils.</p>
+            <div class="hero-buttons">
+                <a class="btn-left"href="#">voir mes projects</a>
+                <div class="box-btn">
+                   <a class="btn-right" href="#">Telecharger mon CV</a>
+                   <i class="fa-solid fa-download"></i>
+                </div>
+            </div>
+            <div class="media-icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-square-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <div class="hero-left">
+            <img src="fallou.png">
+        </div>
+    </section>
+    <!--hero-->
+    
+    
+    <section class="about">
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+        <div>
+            
+        </div>
+    </section>
+</body>
+</html>
 
