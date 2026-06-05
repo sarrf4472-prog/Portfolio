@@ -149,7 +149,7 @@ nav li .active::before{
     text-decoration:none;
     color:white;
     font-weight:bold;
-    bordr-radius:5px;
+    border-radius:5px; /* Ya faute de frappe, c'est border-radius */
 }
 
 .box-btn{
@@ -163,7 +163,7 @@ nav li .active::before{
 }
 
 .box-btn .btn-right{
-    text-decoration:0;
+    text-decoration: none; /* C'est none, pas 0 */
     background-color:transparent;
     color:white;
     font-weight:500;
@@ -199,5 +199,3 @@ i{
     height:1px;
 }
 /*hero*/
-
-
