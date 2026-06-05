@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Monsieur+La+Doulaise&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
 *{
     padding:0;
     margin:0;
@@ -11,6 +23,11 @@
 body{
     background:#0A0F1F;
     color:white;
+    background:
+    radial-gradient(circle at top right,#8B1CF120 0%,transparent 30%),
+    radial-gradient(circle at bottom left,#5B1CF120 0%,transparent 30%),
+    #0A0F1F;
+    overflow-x:hidden;
 }
 
 
@@ -22,6 +39,11 @@ body{
     align-items:center;
     padding:0 30px;
     position:relative;
+    backdrop-filter:blur(10px);
+    background:rgba(10,15,31,0.8);
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .header::before{
@@ -66,7 +88,13 @@ nav ul li{
 nav ul li a{
     color:white;
     text-decoration:none;
+    transition:0.3s;
 }
+
+nav ul li a:hover{
+    color:#8B1CF1;
+}
+
 
 ul .active{
     position:relative;
@@ -95,6 +123,27 @@ nav li .active::before{
 }
 /*header*/
 
+.btn-left{
+    background:#8B1CF1;
+    padding:10px 20px;;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    border-radius:5px; /* Ya faute de frappe, c'est border-radius */
+}
+
+/* Bouton principal */
+.btn-left,
+.header-btn{
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(139,28,241,0.3);
+}
+
+.btn-left:hover,
+.header-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 25px rgba(139,28,241,0.7);
+}
 
 /*hero*/
 .hero{
@@ -143,15 +192,6 @@ nav li .active::before{
     margin-top:20px;
 }
 
-.btn-left{
-    background:#8B1CF1;
-    padding:10px 20px;;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    border-radius:5px; /* Ya faute de frappe, c'est border-radius */
-}
-
 .box-btn{
     border:1px solid #8B1CF1;
     padding:5px;
@@ -160,6 +200,8 @@ nav li .active::before{
     align-items:center;
     display:flex;
     gap:10px;
+    border-radius:8px;
+    transition:0.3s;
 }
 
 .box-btn .btn-right{
@@ -170,13 +212,32 @@ nav li .active::before{
     padding:5px 0px;
 }
 
+.box-btn:hover{
+    background:#8B1CF1;
+    transform:translateY(-3px);
+}
+
 .media-icons{
     display:flex;
     gap:50px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-i{
-    font-size:30px;
+.media-icons i:hover{
+    color:#8B1CF1;
+    transform:scale(1.2) rotate(5deg);
+}
+
+/* Icônes réseaux */
+.media-icons i{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.media-icons i:hover{
+    color:#8B1CF1;
+    transform:scale(1.2) rotate(5deg);
 }
 
 .hero .hero-left img{
@@ -187,6 +248,11 @@ i{
     position:relative;
     left:-30px;
     object-position:0 25%;
+    border:4px solid #8B1CF1;
+    box-shadow:
+    0 0 30px rgba(139,28,241,0.5),
+    0 0 80px rgba(139,28,241,0.3);
+    animation:float 4s ease-in-out infinite;
 }
 
 .hero::before{
